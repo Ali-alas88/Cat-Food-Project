@@ -1,24 +1,53 @@
+// CONFIG TAILWIND
+
+tailwind.config = {
+  theme: {
+    fontFamily: {
+      popins: "Poppins, sans-serif",
+    },
+    extend: {
+      screens: {
+        xsm: "400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
+      colors: {
+        priColor: "#FFA800",
+        secColor: "#FFEBC3",
+        bgColor: "#FFFBF3 ",
+        bgfacts: "#E89058",
+      },
+    },
+  },
+};
+
+
+
+            // HUMERGER MENU
+
+
 let openMenu = document.getElementById("openMenu");
-let closeMenu = document.getElementById("closeMenu"); // Include the closeMenu variable
+let closeMenu = document.getElementById("closeMenu"); 
 let mobileMenu = document.getElementById("mobileMenu");
 let html = document.querySelector("html");
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Add event listener to closeMenu button
+ 
   closeMenu.addEventListener("click", () => {
-    // mobileMenu.classList.toggle('transition-all');
+   
     mobileMenu.classList.toggle("hidden");
-    html.classList.toggle("overflow-x-hidden");
+    html.classList.toggle("overflow-y-hidden");
   });
 
   // Add event listener to openMenu button
   openMenu.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
-    html.classList.toggle("overflow-x-hidden");
+    html.classList.toggle("overflow-y-hidden");
   });
 });
-
-
 
 
 
@@ -46,8 +75,6 @@ ScrollReveal().reveal(".hero-img , .testimonia-text , .text", {
   delay: 500,
   origin: "bottom   ",
 });
-
-
 
 
 
