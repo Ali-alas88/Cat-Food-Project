@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="scroll-smooth  overflow-x-hidden" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Cat Food</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'popins': "Poppins, sans-serif",
+        },
+        extend: {
+          screens: {
+            xsm: "400px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+          },
+          colors: {
+            priColor: "#FFA800",
+            secColor: "#FFEBC3",
+            bgColor: "#FFFBF3 ",
+            bgfacts: "#E89058",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-bgColor h-screen w-full font-popins scroll-smooth">
+  <header id="Home" class="  mx-auto  fixed top-0  right-0 left-0  h-[4rem] md:h-[5rem] bg-bgColor shadow-2xl z-10">  
+    <div class="flex p-4 justify-between items-center ">
+    <!---Logo -->
+    <div class="w-16 md:w-28">
+      <img src="/Assets/friskay.png" alt="Logo">
+    </div> 
+
+    <!---Button Bars -->
+    <button id="openMenu" class="md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
+    </button>
+    
+    
+    <!---Desctop Navigation  -->
+    <ul class="hidden space-x-2  md:flex ">
+      <li><a class=" inline-block text-xl
+      p-2 rounded-md hover:bg-secColor transition-all" href="#Hero-section">Home</a></li>
+       <li><a class=" inline-block text-xl
+      p-2 rounded-md hover:bg-secColor transition-all" href="#testimonia">Testimonia</a></li>
+       <li><a class=" inline-block text-xl
+      p-2 rounded-md hover:bg-secColor transition-all" href="#facts">Facts</a></li>
+       <li><a class=" inline-block text-xl
+      p-2 rounded-md hover:bg-secColor transition-all" href="#studies">Studies</a></li>
+    </ul>
+    </div>
+</header>
+<nav  id="mobileMenu" class=" hidden fixed top-0  right-0 bottom-0 left-0  z-30 backdrop-blur-sm ">
+<!-------- Mobile Navigation   ----->
+<ul class="  flex flex-col absolute top-0 right-0 bottom-0 w-3/4 py-4 bg-white shadow-2xl z-50">
+<li class="border-b border-gray-200">
+<a class=" block px-4 py-4 text-xl font-medium
+hover:bg-secColor" href="#Hero-section">Home</a>
+</li>
+<li class="border-b border-gray-200">
+<a class=" block px-4 py-4 text-xl font-medium
+hover:bg-secColor" href="#testimonia">Testimonia</a>
+</li>
+<li class="border-b border-gray-200">
+<a class=" block px-4 py-4 text-xl font-medium
+hover:bg-secColor" href="#facts">Facts</a>
+</li>
+<li class="border-b border-gray-200">
+<a class=" block px-4 py-4 text-xl font-medium
+hover:bg-secColor" href="#studies">Studies</a>
+</li>
+</ul>
+<button id="closeMenu" class="absolute top-0 left-0 bottom-0  w-full border border-red-400">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-priColor p-4 absolute top-2 left-2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+</button>
+</nav>
+
+  <section id="Hero-section" class="container mx-auto mt-40 md:mt-36 flex flex-col items-center justify-center gap-12 md:flex-row ">
+    <div class="hero-text text-center w-2/3">
+      <p class="text-2xl font-bold md:text-5xl">
+        Your cat will go <br/>
+        <span>Bonkers</span>
+      </p>
+      <p class="md:text-balance mt-2 2xl:text-2xl text-lg">
+        for the world’s best testing cat food, sourced with only the finest
+        ingredients. Made with love from the heart of Mississippi.         
+      </p>
+      <button class="mt-2 md:mt-4 bg-priColor p-2 text-xl rounded-sm">
+        Get Bonkers
+      </button>
+    </div>
+    <div class="hero-img">
+      <img src="/Assets/20240411_172439.png" alt="" class="w-[400px]" />
+    </div>
+  </section>
+  <section class="container mx-auto mt-20 flex flex-col items-center justify-center text-center relative">
+    <p class=" text text-Balance w-2/3 text-xl md:text-4xl font-bold">
+      Veternarians go bonkers for our tasty kitty formula.
+    </p>
+    <div class="vectory relative">
+    <img src="/Assets/20240411_172918.png" class="w-[400px] z-30" />
+    <img src="/Assets/Group 14.png" class="absolute bottom-10" />
+    </div>
+  </section>
+
+
+  <section id="testimonia" class="container mx-auto mt-16 flex flex-col items-center justify-center">
+    <p  class="  text text-center uppercase text-2xl font-bold">Testimonials</p>
+
+    <div id="slider"
+      class=" mt-4 w-full slider-container container mx-auto  flex items-center justify-center transition-opacity duration-500 ease-in-out">
+
+      <!-- Testimonials will be added dynamically here -->
+
+    </div>
+
+    <div class="slider-controls  mx-auto w-auto flex space-x-14 justify-between mt-4 h-auto">
+      <button id="prev-btn" class="prev-btn bg-priColor px-4 py-2 rounded-md">Previous</button>
+      <button id="next-btn" class="next-btn bg-priColor px-4 py-2 rounded-md">Next</button>
+    </div>
+
+  </section>
+
+
+  <section id="facts" class=" mx-auto w-full  mt-40 bg-bgfacts flex flex-col items-center justify-center p-4 relative">
+    <img class="w-[400px] absolute -top-28 " src="/Assets/bowl 1.png" alt="Bowl-image">
+    <div  class=" wrapper mt-24 mx-auto flex flex-col md:flex-row text-wrap  md:gap-40 ">
+      <div class="facts1 mx-auto max-w-[300px] ">
+        <div class="skiw mx-auto">
+          <p class=" bg-[#FFD1B3] w-16 py- text-center font-bold rounded-md -skew-y-6 mb-4 mt-4">Facts 1</p>
+          <p>Free from artificial colors, flavors, and preservatives, our cat food offers a natural and nutritious diet
+            for your feline friend.</p>
+        </div>
+        <div class="skiw ">
+          <p class=" bg-[#FFD1B3] w-16 py- text-center font-bold rounded-md -skew-y-6 mb-4 mt-10">Facts 2</p>
+          <p>Packed with high-quality protein, our new cat food supports strong muscles and a healthy heart in cats of all ages.</p>
+
+        </div>
+
+        </div>
+
+        <!-- FACTS 1 IYO 2  ☝☝☝☝☝☝ -->
+
+
+         <!-- FACTS 3 IYO 4 👇👇👇👇👇 -->
+
+
+      <div class="facts2 mx-auto max-w-[300px]">
+        <div class="skiw ">
+          <p class=" bg-[#FFD1B3] w-16 py- text-center font-bold rounded-md -skew-y-6 mb-4 mt-4">Facts 3</p>
+          <p>Enriched with omega-3 and omega-6 fatty acids, it promotes a shiny coat and healthy skin, making it ideal for cats with sensitive skin</p>
+
+        </div>
+        <div class=" ">
+          <p class=" bg-[#FFD1B3] w-16 py- text-center font-bold rounded-md -skew-y-6 mb-4 mt-4">Facts 4</p>
+          <p class="mx-auto">Formulated with prebiotics and probiotics, this cat food aids in digestion and supports a balanced gut microbiome.</p>
+
+        </div>
+
+    </div>
+  </section>
+
+<section id="studies" class="container w-full  h-[100px] p-4 mx-auto mt-20">
+  <div   class="Wrapper flex gap-y-8 flex-col md:flex-row  items-center justify-evenly mx-auto">
+    <div class="footer-Logo">
+  <h1 class="text-3xl font-bold md:ml-40">Friskay</h1>
+  <p class="text-2xl  font-medium">Are You Ready to Go Bonkers</p>
+</div>
+<div class="Button">
+  <button class=" footer-btn bg-priColor p-2 text-xl rounded-md ">
+    Get Bonkers
+  </button>
+</div>
+  </div>
+</section>
+
+<footer class="mx-auto bg-secColor w-full mt-44 p-4 text-sm">
+  <div class="menu-and-links flex items-center justify-between space-x-4 flex-col md:flex-row mx-auto space-y-4">
+    <ul class="flex space-x-4 items-center">
+      <div class="footer-Logo w-16">
+        <img src="/Assets/friskay.png" alt="CAT LOGO" class="w-full" />
+      </div>
+      <li>|</li>
+      <li> <a href="#header">Home</a></li>
+    </ul>
+    <ul class="flex flex-col md:flex-row items-center justify-center space-x-4">
+      <li><a class="text-xl font-medium hover:opacity-50 hover:transition-all" href="#">Our Food</a></li>
+      <li><a class="text-xl font-medium hover:opacity-50 hover:transition-all" href="#">Ingredients</a></li>
+      <li><a class="text-xl font-medium hover:opacity-50 hover:transition-all" href="#">Studies</a></li>
+      <li><a class="text-xl font-medium hover:opacity-50 hover:transition-all" href="#">FAQ</a></li>
+    </ul>
+  </div>
+  <div class="footer mt-4">
+    <p class="mt-4 text-center ">Copyright © 2024 Friskay Food. <br>Developed by <a class="text-xl font-medium text-priColor" href="">Coder-Ali.</a></p>
+  </div>
+</footer>
+
+
+
+<script src="main.js"></script>
+</body>
+
+</html>
