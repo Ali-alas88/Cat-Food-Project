@@ -1,4 +1,4 @@
-// CONFIG TAILWIND
+// CONFIG TAILWIND CSS For Container Amd Colors 
 
 tailwind.config = {
   theme: {
@@ -140,3 +140,20 @@ nexT.addEventListener("click", next);
 preV.addEventListener("click", prev);
 
 render();
+
+
+
+
+//  Scroll Up  For When the  
+
+let toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+  if (this.scrollY > 500) {
+    toTop.classList.toggle('hidden');
+  } else {
+  toTop.classList.toggle('hidden');
+  }
+});
+toTop.onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
