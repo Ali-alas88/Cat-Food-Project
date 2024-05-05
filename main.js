@@ -154,13 +154,29 @@ render();
 //  Scroll Up  For When the  
 
 let toTop = document.getElementById('toTop');
+
 window.addEventListener('scroll', () => {
-  if (this.scrollY > 500) {
-    toTop.classList.toggle('hidden');
+  if (this.scrollY > 300) {
+    // If the scroll position is beyond 300px, show the button
+    showToTopButton();
   } else {
-  toTop.classList.toggle('hidden');
+    // Otherwise, hide the button
+    hideToTopButton();
   }
 });
+
 toTop.onclick = function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showToTopButton() {
+  if (toTop.classList.contains('hidden')) {
+    toTop.classList.remove('hidden');
+  }
+}
+
+function hideToTopButton() {
+  if (!toTop.classList.contains('hidden')) {
+    toTop.classList.add('hidden');
+  }
 }
