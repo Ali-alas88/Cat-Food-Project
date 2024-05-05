@@ -62,19 +62,26 @@ ScrollReveal({
   duration: 2500,
   delay: 400,
 });
-ScrollReveal().reveal(
-  ".hero-text , .facts1 , .prev-btn , .footer-Logo , .vectory",
-  { delay: 500, origin: "left" }
-);
-ScrollReveal().reveal(" .facts2 , .next-btn , .footer-btn", {
+
+// Define a separate configuration for elements excluding the button
+const revealConfig = {
+  delay: 500,
+  origin: "left",
+};
+
+ScrollReveal().reveal(".hero-text , .facts1 , .prev-btn , .footer-Logo , .vectory", revealConfig);
+
+// Define another configuration for elements excluding the button
+const revealConfigRight = {
   delay: 500,
   origin: "right",
-});
+};
+
+ScrollReveal().reveal(" .facts2 , .next-btn , .footer-btn", revealConfigRight);
+
+// Exclude the button from the reveal
 ScrollReveal().reveal("#slider ", { delay: 500, origin: "top" });
-ScrollReveal().reveal(".hero-img , .testimonia-text , .text", {
-  delay: 500,
-  origin: "bottom   ",
-});
+ScrollReveal().reveal(".hero-img , .testimonia-text , .text", { delay: 500, origin: "bottom" });
 
 
 
